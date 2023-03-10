@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce-node.js-apis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddant-rachha/ECOMMERCE-NODE.JS-APIS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siddant-rachha/ECOMMERCE-NODE.JS-APIS/issues"
+  },
+  "homepage": "https://github.com/siddant-rachha/ECOMMERCE-NODE.JS-APIS#readme"
+}
