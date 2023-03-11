@@ -3,7 +3,9 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 
+//routes import
 const userRoute = require("./routes/user.js")
+const authRoute = require("./routes/auth.js")
 
 
 dotenv.config();
@@ -12,7 +14,9 @@ const jsonParser = bodyParser.json();
 
 const app = express();
 
-app.use("/",jsonParser,userRoute);
+// routes
+app.use("/api/auth", jsonParser, authRoute);
+app.use("/api/users",jsonParser,userRoute);
 
 
 app.listen( process.env.PORT || 5000, ()=>{
