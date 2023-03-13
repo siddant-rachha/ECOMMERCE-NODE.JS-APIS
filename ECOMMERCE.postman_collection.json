@@ -254,6 +254,315 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET_5_NEW_USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGNiZjQ4ZjRiYTIyOGI2ZWEzN2JiMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3ODU1NzA2MywiZXhwIjoxNjc4ODE2MjYzfQ.cLlrZfPArenusj--9kmzSEuAQa2k7zfIGzg_yVvi43k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users?new=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "new",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRODUCT_ADD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGNiZjQ4ZjRiYTIyOGI2ZWEzN2JiMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3ODU1NzA2MywiZXhwIjoxNjc4ODE2MjYzfQ.cLlrZfPArenusj--9kmzSEuAQa2k7zfIGzg_yVvi43k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"test6 tshirt\",\r\n    \"desc\": \"test\",\r\n    \"img\": \"test\",\r\n    \"categories\":[\"men\", \"tops\"],\r\n    \"size\":\"m\",\r\n    \"color\":\"gray\",\r\n    \"price\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PRODUCT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGNiZjQ4ZjRiYTIyOGI2ZWEzN2JiMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3ODU1NzA2MywiZXhwIjoxNjc4ODE2MjYzfQ.cLlrZfPArenusj--9kmzSEuAQa2k7zfIGzg_yVvi43k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"nike tshirt\",\r\n    \"desc\": \"test\",\r\n    \"img\": \"test\",\r\n    \"categories\": [\"shirt\",\"man\"],\r\n    \"size\":\"m\",\r\n    \"color\":\"gray\",\r\n    \"price\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/640e3342b960fe727c0daae6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"640e3342b960fe727c0daae6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PRODUCT",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGNiZjQ4ZjRiYTIyOGI2ZWEzN2JiMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3ODU1NzA2MywiZXhwIjoxNjc4ODE2MjYzfQ.cLlrZfPArenusj--9kmzSEuAQa2k7zfIGzg_yVvi43k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/640e3342b960fe727c0daae6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"640e3342b960fe727c0daae6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE PRODUCT",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/find/640e34bbb960fe727c0daae9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"find",
+						"640e34bbb960fe727c0daae9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL PRODUCTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET 5 NEW PRODUCTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products?new=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "new",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCTS BY CATEGORY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGNiZjQ4ZjRiYTIyOGI2ZWEzN2JiMCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3ODU1NzA2MywiZXhwIjoxNjc4ODE2MjYzfQ.cLlrZfPArenusj--9kmzSEuAQa2k7zfIGzg_yVvi43k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products?category=tops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "tops"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

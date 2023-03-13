@@ -48,11 +48,13 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
     }
 })
 
-//get all user
+//get all user or new 5 users
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
 
+    const query = req.query.new
+
     try {
-        const getAllUser = await User.find()
+        const getAllUser = query ? await User.find().sort({ _id: -1 }).limit(5) : await User.find()
 
         return res.status(200).json(getAllUser);
 
