@@ -7,6 +7,8 @@ const bodyParser = require("body-parser");
 const userRoute = require("./routes/user.js")
 const authRoute = require("./routes/auth.js")
 const productRoute = require("./routes/product.js")
+const cartRoute = require("./routes/cart.js")
+
 
 
 dotenv.config();
@@ -19,6 +21,7 @@ const app = express();
 app.use("/api/auth", jsonParser, authRoute);
 app.use("/api/users",jsonParser,userRoute);
 app.use("/api/products",jsonParser,productRoute);
+app.use("/api/carts",jsonParser,cartRoute);
 
 
 app.listen( process.env.PORT || 5000, ()=>{
